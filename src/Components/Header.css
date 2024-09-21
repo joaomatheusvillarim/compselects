@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Protest+Guerrilla&display=swap');
+
+
+header {
+
+
+    background-color: var(--color1);
+    height: var(--header-heigth);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    color: white;
+
+}
+
+ul {
+
+    display: flex;
+    
+
+}
+
+li{
+
+    margin: 0 5px;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.logo{
+
+    font-family: "Protest Guerrilla";
+
+}
+
+li :hover {
+
+    border-bottom: 2px #fff solid;
+    transition: all 0.5s ease-in-out;
+
+
+}
+
+.active{
+
+    color: black;
+
+}

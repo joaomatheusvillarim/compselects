@@ -1,35 +1,62 @@
-
+"use client"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 export default function Menu(){
+    const pathName = usePathname()
+
+    console.log(pathName)
+
 
     return (
+        <nav>
+            <ul>
 
-        <ul>
+                <li className={pathName === "/" ? 'active' : ""}>
+                    <Link href="/">
+                        Home
+                    </Link>
+                </li>
+                <li className={pathName === "/aboutus" ? 'active' : ""}>
+                    <Link href="/aboutus">
+                        Sobre Nós    
+                    </Link>
+                </li>
+                <li className={pathName === "/publications" ? 'active' : ""}>
+                    <Link href="/publications">
+                        Publicações
+                    </Link>
+                </li>
+                <li className={pathName === "/authors" ? 'active' : ""}>
+                    <Link href="/authors">
+                        Autores
+                    </Link>
+                </li>
+                <li className={pathName === "/submissions" ? 'active' : ""}>
+                    <Link href="/submissions">
+                        Submissões
+                    </Link>
+                </li>
+                <li className={pathName === "/events" ? 'active' : ""}>
+                    <Link href="/events">
+                        Eventos
+                    </Link>
+                </li>
+                <li className={pathName === "/blog" ? 'active' : ""}>
+                    <Link href="/blog">
+                        Blog
+                    </Link>
+                </li>
+                <li className={pathName === "/contact" ? 'active' : ""}>
+                    <Link href="/contact">
+                        Contato
+                    </Link>
+                </li>
 
-            <li>
-                Home
-            </li>
-            <li>
-                Sobre Nós    
-            </li>
-            <li>
-                Publicações
-            </li>
-            <li>
-                Autores
-            </li>
-            <li>
-                Submissões
-            </li><li>
-                Eventos
-            </li><li>
-                Blog
-            </li><li>
-                Contato
-            </li>
+            </ul>
 
-        </ul>
-
+        </nav>
+        
     )
 
 }
